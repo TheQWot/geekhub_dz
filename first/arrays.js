@@ -4,6 +4,7 @@ var a_mas=['1','2','3','4','5','9','7','15'];
 var i;
 //сортировки для
 function compareNumeric(a, b) {
+    //можно было return a-b но пускай будет так
     if (+a > +b) return 1;
     if (+a < +b) return -1;
 }
