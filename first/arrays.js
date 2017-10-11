@@ -34,7 +34,7 @@ console.log(a_mas.sort());
 console.log('сортируем с помощью функции (с переводом в нумерик)');
 console.log(a_mas.sort(compareNumeric));
 //обратная сортировка
-console.log('обратная сортировка');
+console.log('Делаем зеркало массива');
 console.log(a_mas.reverse());
 console.log('Тестируем concat');
 var b_mas=a_mas.concat('8','6');
@@ -66,14 +66,14 @@ console.log(txt_mas.lastIndexOf('мама'));
 //перебор
 console.log('Перебираем весь массив при помощи forEach (переводим в верхний регистр)');
 txt_mas.forEach(function (item, i, txt_mas) {
-    txt_mas[i]=txt_mas[i].toUpperCase();
+    item.toUpperCase();
 });
 console.log(txt_mas);
 console.log('Фильтруем массив - выбираем всё больше 5');
 var c_mas=b_mas.filter(function(elem){return +elem>5});
 console.log(c_mas);
 
-console.log('Тестируем трансформацию при помощи map');
+console.log('Трансформацию при помощи map');
 var z_mas=a_mas.map(function (val) { return val=--val; });
 console.log(z_mas);
 function my_fnc(element, index, array) {
@@ -81,6 +81,6 @@ function my_fnc(element, index, array) {
 
 }
 //Работает только начиная с 6 спецификации!
-console.log('Находим первый элемент с длинной больше 6 ')
+console.log('Находим первый элемент с длинной больше равно 6 ')
 
 console.log(txt_mas.find(my_fnc));
