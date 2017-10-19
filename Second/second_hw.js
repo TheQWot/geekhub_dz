@@ -6,6 +6,7 @@ var str='';
  str+='#';
  console.log(str);
  }
+console.log('Ну оба эти варианта одинаковы');
 console.log('Менее очевидный вариант с заранее объявленой строкой и её длинной');
 var str ='#';
 for (;str.length<8;str+='#') console.log(str);
@@ -73,6 +74,7 @@ function countSimbol(a,b)
 var SimbolCount=0;
     for (var i=0;i<a.length;++i)
     {
+     //хотя тут стоило бы ставить строгое соотвествие ===
         if (a.charAt(i)==b) SimbolCount+=1;
 
     }
