@@ -1,3 +1,4 @@
+var a=['To-do Item'];
 var b;
 function formatDate(date)
 {
@@ -18,7 +19,7 @@ function remElem(elemen)
     var par=elemen.parentNode;
         b[par.id]='/';
         par.parentNode.removeChild(par);
-
+        save_list();
 }
 
 function editElem(elemen)
@@ -62,7 +63,8 @@ function add_list(list)
 function save_list()
 {
     var a=[];
-    for (var i=0; i<b.length; i++)  if (b[i]!=='/') a.push(b[i])
+    for (var i=0; i<b.length; i++)  if (b[i]!=='/') a.push(b[i]);
+    b=a;
     localStorage.setItem('arr',a.join('|'));
 }
 
@@ -109,4 +111,5 @@ document.getElementById('content').appendChild(add_btn);
 document.getElementById('content').appendChild(save_btn);
 document.getElementById('content').appendChild(rever);
 
-if (b[0]!=='') add_list(b);
+if ((b[0]!=='')||(b!==null)) add_list(b)
+else b=a;
